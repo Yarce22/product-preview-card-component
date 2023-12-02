@@ -2,6 +2,7 @@
   --button-color: #3D8168;
   --primary-text-color: #1C232B;
   --secundary-text-color: #6C7289;
+  --terciary-text-color: #FFF;
   --backgound-color: #F2EAE2;
   --primary-font-family: 'Montserrat', sans-serif;
   --secundary-font-family: 'Fraunces', serif;
@@ -17,3 +18,98 @@ html {
   font-size: 62.5%;
   font-family: var(--primary-font-family);
 } 
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--backgound-color);
+}
+
+.product-card-container {
+  display: flex;
+  width: 600px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.product-card-container .image {
+  width: 50%;
+  height: 450px;
+  border-radius: 10px 0 0 10px;
+  background: no-repeat 100%/100% url(../images/image-product-desktop.jpg);
+}
+
+.product-card-container .description {
+  background-color: var(--terciary-text-color);
+  width: 50%;
+  padding: 32px;
+  border-radius: 0 10px 10px 0;
+}
+
+.product-card-container .description p:nth-child(1) {
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: var(--secundary-text-color);
+}
+
+.product-card-container .description h1 {
+  margin: 24px 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  font-family: var(--secundary-font-family);
+}
+
+.product-card-container .description p:nth-child(3) {
+  max-width: 226px;
+  font-size: 14px;
+  color: var(--secundary-text-color);
+}
+
+.product-card-container .description .cost {
+  display: flex;
+  align-items: center;
+  margin: 36px 0;
+}
+
+.product-card-container .description .cost p:nth-child(1) {
+  font-family: var(--secundary-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: var(--button-color);
+  margin-right: 19px;
+}
+
+.product-card-container .description .cost p:nth-child(2) {
+font-size: 13px;
+line-height: 23px;
+color: var(--secundary-text-color);
+} 
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  background-color: var(--button-color);
+  border-radius: 8px;
+  border: none;
+}
+
+button div {
+  width: 14px;
+  height: 16px;
+  margin-right: 10px;
+  background: no-repeat 100%/100% url(../images/icon-cart.svg);
+}
+
+button p {
+  font-family: var(--primary-font-family);
+  font-size: 14px;
+  color: var(--terciary-text-color)
+}
